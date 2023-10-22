@@ -21,6 +21,7 @@ function draw() {
 
   xJOS=constrain(xJOS,75,width-75);
   yJOS=constrain(yJOS,75,height-75);
+  snelheidJOS=constrain(snelheidJOS,-17,17);
   text("x = " + round(xJOS) + " y = " + yJOS + " Snelheid = " + snelheidJOS ,10,20);
   
   translate(xJOS,yJOS);
