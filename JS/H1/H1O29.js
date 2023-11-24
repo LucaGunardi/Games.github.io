@@ -1,5 +1,5 @@
-var aantal = 5;
-
+var aantal = 17;
+var Nbloemen;
 function setup() {
   canvas = createCanvas(450,450);
   canvas.parent('processing');
