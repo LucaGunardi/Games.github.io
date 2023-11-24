@@ -31,6 +31,7 @@ function tekenHuis() {
   pop();
 }
 
+
 function tekenBoom(x) {
   push();
   noStroke();
