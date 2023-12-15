@@ -4,7 +4,7 @@ var hoogte;
 
 function setup() {
   hoogte = breedte / 2;
-  canvas = createCanvas(aantalLagen*breedte + 1,aantalLagen*hoogte + 1);
+  canvas = createCanvas(aantalLagen * breedte + 1, aantalLagen * hoogte + 1);
   canvas.parent('processing');
   noLoop();
   background('silver');
@@ -13,15 +13,18 @@ function setup() {
 }
 
 function draw() {
-  tekenRij(4);
+  for (var laag = 0; laag < aantalLagen; laag++) {
+    tekenRij(laag + 1); // Het aantal stenen per laag neemt toe
+    translate(0, hoogte);
+  }
 }
 
 function tekenRij(aantalStenen) {
-  inspringen = 0;
+  var inspringen = (aantalLagen - aantalStenen) * 0.5 * breedte;
   push();
-  translate(inspringen,0);
-  for (var steen = 0;steen < aantalStenen;steen++) {
-    rect(breedte*steen,0,breedte,hoogte);
+  translate(inspringen, 0);
+  for (var steen = 0; steen < aantalStenen; steen++) {
+    rect(breedte * steen, 0, breedte, hoogte);
   }
   pop();
 }
