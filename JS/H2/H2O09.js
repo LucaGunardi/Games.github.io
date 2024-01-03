@@ -23,7 +23,7 @@ function draw() {
   blauw = pixelKleur[2];
   
   fill(pixelKleur);
-  rect(0,410,450,40);
-  fill('white');  
-  text("RGB-waarden: rood = " + rood + " groen = " + groen+" blauw = " + blauw,10,435);
+  //rect(0,410,450,40);
+  //fill('white');  
+  //text("RGB-waarden: rood = " + rood + " groen = " + groen+" blauw = " + blauw,10,435);
 }
