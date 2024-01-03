@@ -15,11 +15,13 @@ function setup() {
   canvas = createCanvas(901,601);
   canvas.parent('processing');
   celGrootte = width / aantalKolommenRaster;
+  xJos=400;
+  yJos=300;
 }
 
 function draw() {
   image (brug,0,0,901,601);
-  image (spriteJos,xJos,yJos,901,601);
+  image (spriteJos,xJos,yJos);
   tekenRaster();
 }
 
