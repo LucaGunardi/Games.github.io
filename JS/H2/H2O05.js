@@ -18,7 +18,8 @@ function setup() {
 }
 
 function draw() {
-  
+  image (brug,0,0,901,601);
+  image (spriteJos,xJos,yJos,901,601);
   tekenRaster();
 }
 
@@ -26,6 +27,14 @@ function tekenRaster() {
   push();
   noFill();
   stroke('grey');
+  for (var rij = 0;rij < aantalRijenRaster;rij++) {
+    for (var kolom = 0;kolom < aantalKolommenRaster;kolom++) {
+      rect(kolom*celGrootte,rij*celGrootte,celGrootte,celGrootte);
+    }
+  }
+  
+      rect(4*celGrootte,2*celGrootte,celGrootte,celGrootte);
+
   /*
   Maak hieronder een dubbele herhaling om een raster te maken.
   HINT: je kunt terugkijken naar het raster dat je in H1 hebt gemaakt.

@@ -18,12 +18,15 @@ function draw() {
   background('grey');
   image(strand,strandX,0);
   image(strand,strandX + width,0);
-
+  if(strandX>=0){strandX=0;}
+  else if (strandX<=-600){strandX=0;}
   if (keyIsDown(RIGHT_ARROW)) {
     strandX++;
   }
   else {
     strandX--; 
   }
+
+  
   text("strandX=" + strandX,20,20);
 }
