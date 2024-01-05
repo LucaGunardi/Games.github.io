@@ -28,6 +28,8 @@ class Knikker {
 
 var knikkerVerzameling = [];
 
+ 
+
 function setup() {
   canvas = createCanvas(1000,300);
   canvas.parent('processing');
@@ -35,11 +37,16 @@ function setup() {
   colorMode(RGB,255,255,255,1);
   background(0,0,75,1);
   noStroke();
-  k1 = new Knikker();
+  for (var k = 0; k < 10; k++) {
+    knikkerVerzameling.push(new Knikker());
+  // k1 = new Knikker();
+}
 }
 
 function draw() {
   background(0,0,75,0.2);
-  k1.beweeg();
-  k1.teken();
+  for (var k = 0; k < knikkerVerzameling.length; k++) {
+    knikkerVerzameling[k].teken();
+    knikkerVerzameling[k].beweeg();
+}
 }

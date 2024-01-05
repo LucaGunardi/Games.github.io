@@ -21,6 +21,12 @@ var cirkel = {
 
   controleerRaak() {
     afstandMuisCirkel = dist(mouseX,mouseY,this.x,this.y);
+    if (mouseIsPressed == true && mouseX >= this.x - 0.5*this.diameter && mouseX <= this.x + 0.5*this.diameter
+      && mouseY <= this.y + 0.5*this.diameter && mouseY >= this.y - 0.5*this.diameter)  {
+       this.kiesEenPlek();
+       this.alpha = this.alpha * 0.8;
+       this.aantalRaak = this.aantalRaak + 1;
+    }
 
   }
 }
@@ -49,4 +55,5 @@ function draw() {
 
   cirkel.controleerRaak();
   cirkel.teken();
+  text( "Aantal keren geraakt:" + cirkel.aantalRaak,10,30);
 }

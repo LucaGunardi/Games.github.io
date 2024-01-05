@@ -61,4 +61,5 @@ function draw() {
       erIsNogGeenBalGestuiterd = false;
     }
   }
+  
 }
