@@ -35,4 +35,25 @@ function setup() {
 function draw() {
   background('lavender');
   image(spriteSheet,x,y,br,ho,(frameCount % aantalSpriteKolommen)*sBr,rij*sHo,sBr,sHo);
+
+  if (keyIsDown(LEFT_ARROW)) {
+    xJos -= celGrootte;
+    nummer = 2;
+  }
+  if (keyIsDown(RIGHT_ARROW)) {
+    xJos += celGrootte;
+    nummer = 1;
+  }
+  if (keyIsDown(UP_ARROW)) {
+    yJos-=celGrootte;
+    nummer = 4;
+   
+  }
+  if (keyIsDown(DOWN_ARROW)) {
+    yJos += celGrootte;
+    nummer = 5;
+  }
+  
+  xJos = constrain(xJos,0,width - celGrootte);
+  yJos = constrain(yJos,0,height - celGrootte);
 }
